@@ -7,7 +7,7 @@ import { createWatchProgram } from "typescript";
 const router = express.Router();
 
 //Route 1 : get request => list of all expenses + incomes from user => retrieve all data from DB that matches userid of user
-router.get("/getAllByUserID:userId", async (req: Request, res: Response) => {
+router.get("/getAllByUserID/:userId", async (req: Request, res: Response) => {
     //try to find all records in FinancialRecordModel
     try{
         const userId = req.params.userId as string;
